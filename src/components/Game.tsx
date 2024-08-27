@@ -53,7 +53,10 @@ export function Game() {
 
 	return (
 		<div className="game">
-			<Board cards={cards} onCardClick={handleCardClick} />
+			<Board
+				cards={cards}
+				onCardClick={handleCardClick}
+			/>
 			{chances === 0 ? (
 				<p>Suas tentativas acabaram!</p>
 			) : result === cards.length ? (
@@ -61,7 +64,10 @@ export function Game() {
 			) : (
 				<p>Você tem {chances} tentativa(s)!</p>
 			)}
-			<button className="btn" onClick={resetGame}>
+			<button
+				className="btn"
+				onClick={resetGame}
+			>
 				Reiniciar o jogo
 			</button>
 		</div>
